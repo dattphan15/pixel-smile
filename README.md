@@ -12,3 +12,10 @@ X   XXXXXXXXXXXX   X
 X                  X
 XXXXXXXXXXXXXXXXXXXX
 ```
+
+### Install TypeScript  
+```npm i -g typescript```
+
+View initial setup commit for the unsolved version.
+
+Run ```tsc``` to display type errors.
