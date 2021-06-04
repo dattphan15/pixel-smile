@@ -32,17 +32,39 @@ function drawRectangle(
   drawVerticalLine(x + width - 1, y, height);
 }
 
+/**
+ * Sets imageData index for the specific x and y position to be true to designate that pixel as "on". 
+ * 
+ * @param x - The horizontal positition within the image.
+ * @param y - The vertical position within the image.
+ */
+
 function drawDot(x: number, y: number) {
   if (isPointInImage(x, y)) {
+    // given an image width of 20, the index of the pixel at x = 4, y = 2 would be 2 * 20 + 4 = 44.
     imageData[y * imageWidth + x] = true;
   }
 };
+
+/**
+ * Makes a horizontal line by keeping y the same and increase the provided x value by i. 
+ * 
+ * @param x - The horizontal positition within the image.
+ * @param y - The vertical position within the image.
+ */
 
 function drawHorizontalLine(x: number, y: number, length: number) {
  for (let i = 0; i < length; i++) {
    drawDot(x + i, y)
  }
 };
+
+/**
+ * Makes a vertical line by keeping x the same and increase the provided y value by i. 
+ * 
+ * @param x - The horizontal positition within the image.
+ * @param y - The vertical position within the image.
+ */
 
 function drawVerticalLine(x: number, y: number, length: number) {
  for (let i = 0; i < length; i++) {
